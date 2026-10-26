@@ -1,5 +1,5 @@
 import logging
-from .services.asset_service import add_asset
+from .services.asset_service import add_asset, list_assets
 from .errors import DuplicateAssetError
 logger = logging.getLogger(__name__)
 def show_welcome():
@@ -22,6 +22,15 @@ def handle_add_asset():
     else:
         print(f"Asset {asset.ticker} added successfully.")
 
+def handle_view_assets():
+    asset_list = list_assets()
+    if not asset_list:
+        print("No assets yet")
+        return
+    for asset in asset_list:
+        print(f"{asset.ticker} | {asset.name} | Price: not set")
+
+
 def run_cli():
     show_welcome()
     while True:
@@ -32,7 +41,7 @@ def run_cli():
             logger.info("User selected quit")
             break
         elif choice == "1":
-            print("Asset viewing is not implemented yet")
+            handle_view_assets()
         elif choice == "2":
             handle_add_asset()
         else:
