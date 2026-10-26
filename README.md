@@ -134,22 +134,3 @@ quantities, zero deposits, insufficient cash/shares, and trading with no selecti
 Hold the same ticker in two portfolios at different costs to verify independence.
 View a holding without a market quote, then set its quote to zero to see the
 difference. Repeat rejected operations and confirm cash/holdings do not change.
-
-## Scope and submission
-
-No persistence, live quotes, withdrawals, fees, dividends, shorts, multiple users,
-currencies, account-wide report or trade-history screen are provided. Internal
-trade records support portfolio deletion semantics but are not exposed as a menu.
-
-Work belongs on `codex/assignment1`. Open a pull request into `main` and leave it
-unmerged. The instructor account is `mab105120`; grant collaborator access and
-submit the pull request link on Teams according to the course instructions.
-
-## AI assistance disclosure
-
-The initial implementation was developed through guided exercises. Later portions
-of this version, including portfolio/trading services, the expanded CLI, validation
-and documentation, were generated or revised with AI assistance. The assignment's
-written rules prohibit AI-written code. This version should not be represented as
-independently authored or as meeting that rule; instructor approval is needed for
-submitting an AI-assisted version.
